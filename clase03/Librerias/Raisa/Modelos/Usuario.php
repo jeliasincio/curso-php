@@ -1,8 +1,10 @@
 <?php
 
+namespace Librerias\Raisa\Modelos;
+
 class Usuario 
 {
-    public function encriptaClave(){
-        return "asd234234 asdfasd";
+    public function encriptarClave(){
+        return "asd234234gghgasdfasd";
     }
 }

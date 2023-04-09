@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Librerias\Moises\Modelos;
+namespace Librerias\Moises\Modelos;
 
 class Usuario 
 {
