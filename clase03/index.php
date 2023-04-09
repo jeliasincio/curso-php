@@ -4,7 +4,8 @@
 
     //uso de estaticos
     echo "<br/>";
-    echo Trabajo::$dias_por_semana;
+    echo Trabajo::$dias_por_semana=6;
+    //Trabajo::obtenerDescripcion();
     
     echo "<br/>";
 
