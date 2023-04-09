@@ -1,7 +1,7 @@
 <?php
 require_once "Interfaces/iReporte.php";
 
-class ReporteCompras implements iReporte
+class ReporteCompras implements iReporte, iMail
 {
     public function titulo()
     {
@@ -21,5 +21,18 @@ class ReporteCompras implements iReporte
     public function usuarioReporte()
     {
         return "usuario generado";
+    }
+
+    public function from()
+    {
+
+    }
+    public function to()
+    {
+
+    }
+    public function mensaje()
+    {
+        
     }
 }

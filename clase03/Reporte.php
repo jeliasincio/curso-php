@@ -7,6 +7,7 @@ class Reporte
     protected $titulo;
     protected $fecha;
 
+    //aplicado el concepto de inyección de dependencias
     public function __construct(iReporte $reporte)
     {
         $this->logo = $reporte->logo();
