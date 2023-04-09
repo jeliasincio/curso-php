@@ -1,0 +1,22 @@
+{
+    "name": "ceti/pruebacomposer",
+    "description": "Paquete de pruea de composer",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ceti Chiclayo",
+            "email": "php@ceti.org.pe"
+        }
+    ],
+    "autoload":{
+        "psr-4":{
+            "Sistema\\": "app/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "illuminate/database": "^8.20",
+        "tecnickcom/tcpdf": "^6.3"
+    }
+}
