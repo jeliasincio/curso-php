@@ -1,22 +1,21 @@
 {
-    "name": "ceti/pruebacomposer",
-    "description": "Paquete de pruea de composer",
+    "name": "edwin/clase04",
+    "description": "Proyecto de prueba de composer",
     "type": "project",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Ceti Chiclayo",
-            "email": "php@ceti.org.pe"
-        }
-    ],
-    "autoload":{
-        "psr-4":{
+    "autoload": {
+        "psr-4": {
             "Sistema\\": "app/"
         }
     },
+    "authors": [
+        {
+            "name": "Edwin",
+            "email": "ing.eliasincio123@gmail.com"
+        }
+    ],
     "minimum-stability": "stable",
     "require": {
-        "illuminate/database": "^8.20",
-        "tecnickcom/tcpdf": "^6.3"
+        "illuminate/database": "^10.6"
     }
 }

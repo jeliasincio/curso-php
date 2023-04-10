@@ -7,6 +7,6 @@ class Alumno{
     public $apellidos;
 
     public function nombreCompleto(){
-        return $this->apellidos ." ". $this->nombre;
+        return $this->apellidos." ". $this->nombre;
     }
 }
