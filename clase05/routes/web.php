@@ -13,34 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    // función de php, HELPER -> view
-    return view('welcome');
-    // resources/views/welcome.blade.php
-});
+Route::get('/', [App\Http\Controllers\InicioController::class,'inicio']);
 
-Route::get('saludo',function(){
-    $parametros_para_vista =[
-        'nombre_usuario'=>'Elias Incio Edwin',
-        'edad'=>39,
-        'frutas'=>['manzana','platano','naranja']
-    ];
-    return view('inicio.saludo',$parametros_para_vista); //resources/views/inicio/saludo.blade.php
-});
-Route::get('/usuario/editar/{usuario_id?}',function($usuario_id="ID usuario no encontrado"){
-    return "El id de usuario es: ". $usuario_id;
-});
+Route::get('saludo', [App\Http\Controllers\InicioController::class,'saludo']);
 
-Route::get('/json',function(){
-    return response()->json(['manzana','platano','naranja']);
-});
+Route::get('/usuario/editar/{usuario_id?}/{departamento_id}', [App\Http\Controllers\InicioController::class,'usuario']);
 
-Route::get('/cursos',function(){
-    return response()->json([
-        'Programación'=>['PHP','Laravel','React','JavaScript','Sequelize'],
-        'Matematicas'=>['Razonamiento Matemático','Algebra','Artimética', 'Geometría']
-    ]);
-});
+Route::get('/json', [App\Http\Controllers\InicioController::class,'respuestajson']);
+
+Route::get('/cursos', [App\Http\Controllers\InicioController::class,'cursos']);
 // PROTOCOLO HTTP
 // METODOS HTTP
 
