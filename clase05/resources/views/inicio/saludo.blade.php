@@ -1,3 +1,2 @@
-Bienvenido: {{$nombre_usuario}}<br/>
-Mi edad es: {{$edad}}<br/>
-Mis frutas preferidas: {{json_encode($frutas)}}<br/>
+{{-- NO HAGAN CONSULTAS A LA BASE DATOS --}}
+Bienvenido {{ $usuario }} tienes {{ $edad }}

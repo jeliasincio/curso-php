@@ -8,26 +8,45 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
 |
 */
 
-Route::get('/', [App\Http\Controllers\InicioController::class,'inicio']);
+Route::get("/", [App\Http\Controllers\InicioController::class, 'inicio']);
 
-Route::get('saludo', [App\Http\Controllers\InicioController::class,'saludo']);
+Route::get("/saludo", [App\Http\Controllers\InicioController::class, 'saludo']);
 
-Route::get('/usuario/editar/{usuario_id?}/{departamento_id}', [App\Http\Controllers\InicioController::class,'usuario']);
+Route::get("/usuario/editar/{usuario_id?}/{departamento_id?}", [App\Http\Controllers\InicioController::class, 'usuario']);
 
-Route::get('/json', [App\Http\Controllers\InicioController::class,'respuestajson']);
+Route::get('/json', [App\Http\Controllers\InicioController::class, 'respuestajson']);
 
-Route::get('/cursos', [App\Http\Controllers\InicioController::class,'cursos']);
+Route::get(
+    '/persona/crear',
+    [App\Http\Controllers\InicioController::class, 'personas']
+);
+
+Route::get(
+    '/persona/editar/{persona_id}',
+    [App\Http\Controllers\InicioController::class, 'editarPersona']
+);
+
+Route::get(
+    '/persona/eliminar/{persona_id}',
+    [App\Http\Controllers\InicioController::class, 'eliminarPersona']
+);
+
+Route::get(
+    '/persona/listar',
+    [App\Http\Controllers\InicioController::class, 'listarPersona']
+);
+
 // PROTOCOLO HTTP
 // METODOS HTTP
 
 // MUESTRO PAGINAS
 // LISTO RESULTADOS
-//  metodo GET
+// metodo GET
 
 // REGISTRO NUEVOS DATOS
 // metodo POST
@@ -35,5 +54,5 @@ Route::get('/cursos', [App\Http\Controllers\InicioController::class,'cursos']);
 // ACTUALIZO DATOS
 // metodo PUT/PATCH
 
-// ELIMINO DATOS
+// ELIMINAR DATOS
 // metodo DELETE
